@@ -1,4 +1,4 @@
-<form class="add-form" (ngSubmit) = "onSubmit()">
+<form *ngIf="varShowAddTask" class="add-form" (ngSubmit) = "onSubmit()">
     <div class="form-control">
         <label for="name-text">Task</label>
         <!-- 2way databinding between name-text variable and actual input using FormsModule  -->
