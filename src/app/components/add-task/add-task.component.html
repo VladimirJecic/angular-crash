@@ -1,0 +1,18 @@
+<form *ngIf="varShowAddTask" class="add-form" (ngSubmit) = "onSubmit()">
+    <div class="form-control">
+        <label for="name-text">Task</label>
+        <!-- 2way databinding between name-text variable and actual input using FormsModule  -->
+        <!-- [] are input and events are ouput () -->
+        <input type="text" name="name-text" [(ngModel)] = "varText" id="id-text" placeholder="Add Task">
+    </div>
+    <div class="form-control">
+        <label for="name-day">Day & Time</label>
+        <input type="text" name="name-day" [(ngModel)] = "varDay" id="id-day" placeholder="Add Day & Time">
+    </div>
+        <div class="form-control form-control-check">
+        <label for="name-reminder">Set Reminder</label>
+        <input type="checkbox" name="name-reminder" [(ngModel)] = "varReminder" id="id-reminder"/>
+    </div>
+    <!-- Test2WayBindingaTextField = {{varText}} -->
+    <input type="submit" value="Save Task" class="btn btn-block ">
+</form>
