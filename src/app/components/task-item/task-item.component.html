@@ -1,4 +1,12 @@
-<div class = "task">
-    <h3>{{tasksItem?.text}} <fa-icon  [icon]="faTimes"></fa-icon></h3>
-    <p>{{tasksItem?.day}}</p>
+<div [ngClass]="{reminder:tasksItem.reminder}"
+ class = "task"
+(dblclick)="onDoubleClick(tasksItem)" 
+>
+
+    <h3>
+        {{tasksItem.text}}
+        <fa-icon  [icon]="faTimes" (click)="onDeleteClick(tasksItem)" >
+        </fa-icon>
+    </h3>
+    <p>{{tasksItem.day}}</p>
 </div>

@@ -6,17 +6,18 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  private  apiURL: string = 'http://localhost:5001/tasks';
   title : string = 'Task tracker';
 
   constructor() { }
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+  
   }
 
   toggleAddTask(){
-    console.log("Toggled")
+    const urlTest = this.apiURL
+    console.log("Toggled:")
   }
 
 }
