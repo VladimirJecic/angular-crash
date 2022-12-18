@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Task } from '../Task';
-import { TASKS } from '../mock-tasks';
 import {Observable} from 'rxjs'
 // http client returns the observable so we don't need to import 'for'
 import { HttpHeaders, HttpClient } from '@angular/common/http';
